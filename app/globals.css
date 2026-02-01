@@ -1,26 +1,62 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    /* Define your custom brand colors here */
+    --color-primary-green: 6 78 59;   /* RGB for #064e3b (Forest Green) */
+    --color-accent-citrus: 245 158 11; /* RGB for #f59e0b (Vibrant Citrus) */
+  }
+
+  /* Apply custom fonts */
+  html {
+    font-family: var(--font-lato);
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-montserrat);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Custom utility classes */
+.bg-primary-green { background-color: rgb(var(--color-primary-green)); }
+.text-primary-green { color: rgb(var(--color-primary-green)); }
+.border-primary-green { border-color: rgb(var(--color-primary-green)); }
+
+.bg-accent-citrus { background-color: rgb(var(--color-accent-citrus)); }
+.text-accent-citrus { color: rgb(var(--color-accent-citrus)); }
+.border-accent-citrus { border-color: rgb(var(--color-accent-citrus)); }
+
+/* Glassmorphism for sticky header */
+.glass-nav {
+  background-color: rgba(255, 255, 255, 0.9); /* Slightly less opaque white */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px); /* For Safari */
+}
+
+/* Ensure header stays slim */
+.header-slim {
+  max-height: 80px;
+  display: flex;
+  align-items: center;
+}
+
+nav img {
+  /* This ensures that if the PNG has a slight white background, it blends into the white header */
+  mix-blend-mode: multiply;
+}
+
+/* If you want the logo to be extra sharp */
+.object-contain {
+  image-rendering: -webkit-optimize-contrast;
+}
+@layer utilities {
+  .glass-nav {
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px); /* Required for Safari support */
+  }
+}
+
+/* Fix for logos with white backgrounds */
+nav img {
+  mix-blend-mode: multiply;
 }
