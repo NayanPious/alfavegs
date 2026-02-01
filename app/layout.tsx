@@ -21,9 +21,23 @@ const lato = Lato({
 });
 
 export const metadata = {
-  title: 'ALFA | Premium Fresh Produce - From Farm to Table',
-  description: 'Your trusted partner for premium, hand-selected fruits and vegetables. Supplying restaurants, cafes, and catering with 100% fresh, sustainably grown produce for 15+ years.',
-  // Add more SEO tags as needed, e.g., keywords, Open Graph tags
+  title: 'ALFAVEGS | Premium Produce Doha',
+  description: 'Chef-grade fruits and vegetables for Qatar\'s best kitchens.',
+  icons: {
+    icon: [
+      { url: '/favicon.png' }, // Standard favicon
+      { url: '/icon.png', type: 'image/png' }, // Modern browsers
+    ],
+    apple: [
+      { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+    ],
+  },
+  // This makes the mobile status bar look professional
+  appleWebApp: {
+    title: 'ALFAVEGS',
+    statusBarStyle: 'black-translucent',
+    capable: true,
+  },
 };
 
 export default function RootLayout({
