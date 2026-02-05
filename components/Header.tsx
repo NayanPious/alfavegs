@@ -66,7 +66,8 @@ export default function Header() {
         <div className="lg:hidden absolute top-full left-0 w-full bg-white/95 backdrop-blur-xl border-t border-gray-100 py-10 px-6 flex flex-col items-center gap-8 shadow-2xl">
            <a href="#about" onClick={() => setIsMobileMenuOpen(false)} className="text-emerald-950 font-black text-2xl tracking-tighter uppercase">About Us</a>
            <a href="#products" onClick={() => setIsMobileMenuOpen(false)} className="text-emerald-950 font-black text-2xl tracking-tighter uppercase">Our Products</a>
-           <a href="#contact-cta" onClick={() => setIsMobileMenuOpen(false)} className="bg-accent-citrus text-white w-full py-5 rounded-2xl text-center font-black text-xl shadow-xl">SHOP FRESH</a>
+           <a href="#order-process" onClick={() => setIsMobileMenuOpen(false)} className="text-emerald-950 font-black text-2xl tracking-tighter uppercase">How it Works</a>
+           <a href="#contact" onClick={() => setIsMobileMenuOpen(false)} className="bg-accent-citrus text-white w-full py-5 rounded-2xl text-center font-black text-xl shadow-xl">Order Now</a>
         </div>
       )}
     </nav>
