@@ -19,8 +19,8 @@ export default function OrderProcess() {
     },
     {
       icon: <Truck size={32} />,
-      title: "Early Delivery",
-      desc: "Orders arrive at your kitchen between 4 AM and 8 AM, ready for your morning prep shift."
+      title: "Priority Scheduling",
+      desc: "We prioritize early delivery routes for our wholesale partners to ensure zero delays for your breakfast and lunch service."
     }
   ];
 

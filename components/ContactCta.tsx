@@ -4,9 +4,9 @@ import ContactForm from './ContactForm';
 export default function ContactSection() {
 
   return (
-    <section id="contact" className="h-screen w-full snap-start bg-emerald-950 text-white flex flex-col justify-center overflow-hidden">
+    <section id="contact" className="min-h-screen w-full snap-start bg-emerald-950 text-white flex flex-col justify-center py-20">
       <div className="max-w-7xl mx-auto px-6 w-full">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+        <div className="grid lg:grid-cols-2 gap-16 lg:gap-20 items-center">
           
           {/* LEFT SIDE: DIRECT CONTACT & ADDRESS */}
           <div className="space-y-10">
@@ -21,26 +21,26 @@ export default function ContactSection() {
             </div>
 
             <div className="grid grid-cols-1 gap-6">
-              {/* WhatsApp Row - High Visibility */}
+              {/* WhatsApp Row */}
               <a href="https://wa.me/97471010221" className="flex items-center gap-6 bg-white/5 p-6 rounded-[2rem] border border-white/5 hover:border-[#25D366]/50 transition-all group">
-                <div className="w-14 h-14 bg-[#25D366]/20 rounded-full flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
-                  <MessageCircle className="text-[#25D366]" size={28} />
+                <div className="w-12 h-12 md:w-14 md:h-14 bg-[#25D366]/20 rounded-full flex items-center justify-center shrink-0">
+                  <MessageCircle className="text-[#25D366]" size={24} />
                 </div>
                 <div>
-                  <p className="text-xs text-emerald-500 uppercase font-bold tracking-[0.2em] mb-1">Fastest Response</p>
-                  <p className="text-2xl font-black">+974 7101 0221</p>
+                  <p className="text-[10px] text-emerald-500 uppercase font-bold tracking-[0.2em] mb-1">Fastest Response</p>
+                  <p className="text-xl md:text-2xl font-black">+974 7101 0221</p>
                 </div>
               </a>
 
-              {/* Direct Call Lines */}
+              {/* Direct Call Lines - Stacked on tiny phones, 2-col on small tablets */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <a href="tel:+97471010221" className="flex items-center gap-4 bg-white/5 p-5 rounded-2xl border border-white/5 hover:bg-white/10 transition-colors">
-                  <Phone className="text-accent-citrus" size={20} />
-                  <span className="font-bold">+974 7101 0221</span>
+                <a href="tel:+97471010221" className="flex items-center gap-4 bg-white/5 p-5 rounded-2xl border border-white/5">
+                  <Phone className="text-accent-citrus" size={18} />
+                  <span className="font-bold text-sm md:text-base">+974 7101 0221</span>
                 </a>
-                <a href="tel:+97430098981" className="flex items-center gap-4 bg-white/5 p-5 rounded-2xl border border-white/5 hover:bg-white/10 transition-colors">
-                  <Phone className="text-accent-citrus" size={20} />
-                  <span className="font-bold">+974 3009 8981</span>
+                <a href="tel:+97430098981" className="flex items-center gap-4 bg-white/5 p-5 rounded-2xl border border-white/5">
+                  <Phone className="text-accent-citrus" size={18} />
+                  <span className="font-bold text-sm md:text-base">+974 3009 8981</span>
                 </a>
               </div>
 
@@ -57,7 +57,9 @@ export default function ContactSection() {
           </div>
 
           {/* RIGHT SIDE: PREMIUM INQUIRY FORM */}
-          <ContactForm />
+          <div className="w-full">
+             <ContactForm />
+          </div>
         </div>
       </div>
     </section>

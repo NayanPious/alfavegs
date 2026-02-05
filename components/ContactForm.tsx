@@ -72,10 +72,12 @@ export default function ContactForm() {
         <button 
           disabled={isSending}
           type="submit" 
-          className="w-full bg-accent-citrus hover:bg-yellow-400 disabled:bg-gray-600 text-emerald-950 font-black py-5 rounded-2xl transition-all flex items-center justify-center gap-3 shadow-lg shadow-accent-citrus/10 active:scale-[0.98]"
+          className="w-full bg-accent-citrus hover:bg-yellow-400 disabled:bg-gray-600 text-emerald-950 font-black py-4 md:py-5 px-4 rounded-2xl transition-all flex items-center justify-center gap-2 md:gap-3 shadow-lg shadow-accent-citrus/10 active:scale-[0.98] whitespace-nowrap text-sm md:text-base"
         >
-          <Send size={20} />
-          {result || "REQUEST CATALOGUE & QUOTE"}
+          <Send size={20} className="flex-shrink-0" />
+          <span className="truncate">
+            {result || "REQUEST CATALOGUE & QUOTE"}
+          </span>
         </button>
       </form>
     </div>

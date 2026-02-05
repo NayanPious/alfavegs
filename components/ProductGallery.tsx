@@ -70,9 +70,9 @@ export default function ProductGallery() {
                 <p className="text-gray-500 text-sm font-lato leading-relaxed mb-6 h-10">{cat.desc}</p>
                 
                 {/* Replaced "Daily Price" with B2B Action */}
-                <button className="w-full flex items-center justify-center gap-3 px-6 py-4 bg-emerald-950 text-white rounded-xl hover:bg-accent-citrus transition-all font-black text-sm uppercase tracking-wider">
+                <a href="#contact" className="w-full flex items-center justify-center gap-3 px-6 py-4 bg-emerald-950 text-white rounded-xl hover:bg-accent-citrus transition-all font-black text-sm uppercase tracking-wider">
                   <ClipboardList size={18} /> Inquire for Volume
-                </button>
+                </a>
               </div>
             </div>
           ))}
